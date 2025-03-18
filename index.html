@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alireza Foroughi - Video Platform</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .auth-buttons button {
+            padding: 5px 10px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login {
+            background-color: #f50057;
+            color: white;
+        }
+
+        .signup {
+            background-color: #00bcd4;
+            color: white;
+        }
+
+        /* Video Section */
+        .video-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+            padding: 20px;
+        }
+
+        .video-container {
+            width: 40%;
+            max-width: 350px;
+            position: relative;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            background: black;
+        }
+
+        .interaction-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .interaction-buttons button {
+            padding: 8px 16px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .like { background-color: #4caf50; }
+        .comment { background-color: #2196f3; }
+        .save { background-color: #ff9800; }
+        .dislike { background-color: #f44336; }
+
+        /* Video Upload Section */
+        .video-upload {
+            margin-top: 20px;
+            width: 80%;
+            background-color: #fff;
+            color: #000;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .video-upload button {
+            padding: 8px 16px;
+            font-size: 1em;
+            background-color: #f50057;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="nav">
+        <div class="logo">Alireza Foroughi - Video Platform</div>
+        <div class="nav-links">
+            <a href="#">&#127968; For You</a>
+            <a href="#">&#128269; Search</a>
+            <a href="#">&#128206; Save</a>
+            <a href="#">&#10133; Upload</a>
+            <a href="#">&#128100; Profile</a>
+        </div>
+        <div class="auth-buttons">
+            <button class="login">Log In</button>
+            <button class="signup">Sign Up</button>
+        </div>
+    </header>
+
+    <!-- Video Section -->
+    <main class="video-section">
+        <div class="video-container">
+            <video id="videoPlayer" controls>
+                Your browser does not support the video tag.
+            </video>
+            <!-- Interaction Buttons -->
+            <div class="interaction-buttons">
+                <button id="likeButton" class="like">&#128077; Like</button>
+                <button id="commentButton" class="comment">&#128172; Comment</button>
+                <button id="saveButton" class="save">&#128190; Save</button>
+                <button id="dislikeButton" class="dislike">&#128078; Dislike</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Video Upload Section -->
+    <section class="video-upload">
+        <h2>Upload Video</h2>
+        <form id="uploadForm">
+            <input type="file" id="videoFile" accept="video/*" required>
+            <button type="submit">Upload Video</button>
+        </form>
+        <p id="uploadMessage"></p>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Placeholder: Fetch video dynamically from backend if necessary
+        document.getElementById('videoPlayer').src = "https://alirezavideostorage.blob.core.windows.net/videos/AUS.mp4";
+
+        // Button functionalities
+        document.getElementById('likeButton').addEventListener('click', () => {
+            alert('You liked the video!');
+        });
+
+        document.getElementById('commentButton').addEventListener('click', () => {
+            const comment = prompt('Enter your comment:');
+            if (comment) alert(`Comment submitted: "${comment}"`);
+        });
+
+        document.getElementById('saveButton').addEventListener('click', () => {
+            alert('Video saved!');
+        });
+
+        document.getElementById('dislikeButton').addEventListener('click', () => {
+            alert('You disliked the video!');
+        });
+    </script>
+</body>
+</html>
