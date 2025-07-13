@@ -1,4 +1,4 @@
-Video Streaming Platform 🌐📺✨
+### Video Streaming Platform 🌐📺✨
 
 Welcome to a video streaming platform! 🎉 Developed with a focus on scalability and user delight, this project showcases my expertise in cloud computing, backend development, and API design. Created with love and grit, it’s ready to stream into the future! 🌟
 Project Overview 📋
