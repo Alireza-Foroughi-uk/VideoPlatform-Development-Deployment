@@ -1,6 +1,6 @@
 Video Streaming Platform 🌐📺✨
 
-Welcome to a next-level video streaming platform built with cutting-edge tech! 🎉 Developed with a focus on scalability and user delight, this project showcases my expertise in cloud computing, backend development, and API design. Created with love and grit, it’s ready to stream into the future! 🌟
+Welcome to a video streaming platform! 🎉 Developed with a focus on scalability and user delight, this project showcases my expertise in cloud computing, backend development, and API design. Created with love and grit, it’s ready to stream into the future! 🌟
 Project Overview 📋
 
     A scalable, user-friendly video streaming solution that handles high demand, delivers personalized content, and keeps data secure. Think Netflix vibes, but built from scratch!
